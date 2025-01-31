@@ -9,14 +9,21 @@ const businessRoutes = require('./routes/business');
 const adminRoutes = require('./routes/admin');
 const path = require('path');
 
-// Serve uploaded files
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+// Update CORS configuration
+app.use(cors({
+    origin: [
+
+        'https://zesty-stroopwafel-37d9b5.netlify.app' // Your Netlify URL
+    ],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS']
+}));
 
 // Middleware
-app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static('uploads')); // Serve uploaded files
 
+// API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/business', businessRoutes);
 app.use('/api/admin', adminRoutes);
