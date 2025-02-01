@@ -12,8 +12,7 @@ const path = require('path');
 // Update CORS configuration
 app.use(cors({
     origin: [
-
-        'https://zesty-stroopwafel-37d9b5.netlify.app' // Your Netlify URL
+        'inspite-frond-3kt5.vercel.app' // Your Netlify URL
     ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS']
