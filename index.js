@@ -12,7 +12,7 @@ const path = require('path');
 // Update CORS configuration
 app.use(cors({
     origin: [
-        'inspite-frond-3kt5.vercel.app' // Your Netlify URL
+        'https://inspite-frond-3kt5.vercel.app/' // Your Netlify URL
     ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS']
